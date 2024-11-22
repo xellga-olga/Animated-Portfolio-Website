@@ -4,25 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import NavLink from "./navLink";
-import { motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
 
 const links = [
-  {
-    url: "/",
-    title: "Home",
-  },
-  {
-    url: "/about",
-    title: "About",
-  },
-  {
-    url: "/portfolio",
-    title: "Portfolio",
-  },
-  {
-    url: "/contact",
-    title: "Contact",
-  },
+  { url: "/", title: "Home" },
+  { url: "/about", title: "About" },
+  { url: "/portfolio", title: "Portfolio" },
+  { url: "/contact", title: "Contact" },
 ];
 
 const listVariats = {
@@ -34,20 +22,20 @@ const listVariats = {
     transition: {
       when: "beforeChildren",
       staggerChildren: 0.3,
-    }
+    },
   },
 };
 
 const listItemVariants = {
-   closed: {
-      x: -10,
-      opacity: 0,
-   },
-   opened: {
-      x: 0,
-      opacity: 1,
-   }
-}
+  closed: {
+    x: -10,
+    opacity: 0,
+  },
+  opened: {
+    x: 0,
+    opacity: 1,
+  },
+};
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -86,7 +74,9 @@ const Navbar = () => {
       {/* LINKS */}
       <div className="hidden md:flex gap-4 w-1/3">
         {links.map((link) => (
-          <NavLink link={link} key={link.title} />
+          <NavLink link={link} key={link.title}>
+            {link.title}
+          </NavLink>
         ))}
       </div>
 
@@ -152,10 +142,12 @@ const Navbar = () => {
             className="bg-black text-white h-screen w-screen absolute top-0 left-0 flex flex-col items-center justify-center gap-8 text-4xl z-40"
           >
             {links.map((link) => (
-              <motion.div key={link.title} variants={listItemVariants} className="">
-               <Link href={link.url}>
-                {link.title}
-              </Link>
+              <motion.div
+                key={link.title}
+                variants={listItemVariants}
+                className=""
+              >
+                <Link href={link.url}>{link.title}</Link>
               </motion.div>
             ))}
           </motion.div>

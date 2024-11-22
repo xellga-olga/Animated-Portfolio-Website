@@ -1,8 +1,17 @@
+"use client"
+
 import Image from "next/image";
 import Hero from "../../public/hero.png";
+import { motion } from "framer-motion";
 
 const Homepage = () => {
   return (
+    <motion.div 
+    className="h-full"
+    initial={{y:"-200vh"}}
+    animate={{y:"0%"}}
+    transition={{duration: 1}}
+    >
     <div className="h-full lg:flex-row flex flex-col px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
       {/* Image Container */}
       <div className="h-1/2 relative lg:w-1/2 lg:h-full">
@@ -25,6 +34,7 @@ const Homepage = () => {
         </div>
       </div>
     </div>
+    </motion.div>
   );
 };
 
