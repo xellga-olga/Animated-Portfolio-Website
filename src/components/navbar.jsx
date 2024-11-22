@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import NavLink from "./navLink";
-import { motion } from "framer-motion";
+import { motion, stagger } from "framer-motion";
 
 const links = [
   {
@@ -31,8 +31,23 @@ const listVariats = {
   },
   opened: {
     x: 0,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.3,
+    }
   },
 };
+
+const listItemVariants = {
+   closed: {
+      x: -10,
+      opacity: 0,
+   },
+   opened: {
+      x: 0,
+      opacity: 1,
+   }
+}
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -137,9 +152,11 @@ const Navbar = () => {
             className="bg-black text-white h-screen w-screen absolute top-0 left-0 flex flex-col items-center justify-center gap-8 text-4xl z-40"
           >
             {links.map((link) => (
-              <Link href={link.url} key={link.title}>
+              <motion.div key={link.title} variants={listItemVariants} className="">
+               <Link href={link.url}>
                 {link.title}
               </Link>
+              </motion.div>
             ))}
           </motion.div>
         )}
