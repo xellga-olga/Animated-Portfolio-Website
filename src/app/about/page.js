@@ -35,7 +35,7 @@ export default function AboutPage() {
             </p>
             <span className="italic text-center">
               "Code that connects, design that inspires."
-              <Image src={Signature} alt="signature" className="h-14"/>
+              <Image src={Signature} alt="signature" className="h-14 w-auto mx-auto"/>
             </span>
             <Image src={Bottom} alt="bottom" className="h-20 w-auto mx-auto" />
           </div>
