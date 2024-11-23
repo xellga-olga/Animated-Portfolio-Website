@@ -20,7 +20,7 @@ export default function AboutPage() {
           <div className="flex flex-col gap-12 items-center">
             <h1 className="text-2xl font-bold">About Me</h1>
             <p className="text-lg text-center p-5">
-              Hi, I'm <strong>Olya</strong> — a creative and detail-oriented
+              Hi, I am <strong>Olya</strong> — a creative and detail-oriented
               **Frontend Developer** with a passion for modern web development.
               My mission is to create intuitive, visually appealing, and
               high-performance user experiences using the latest tools and
@@ -29,16 +29,21 @@ export default function AboutPage() {
             <p className="text-lg text-center p-5">
               I thrive on solving challenging problems and turning ideas into
               reality with **React**, **JavaScript**, and other cutting-edge
-              frameworks. Whether it’s developing interactive interfaces,
-              optimizing code, or collaborating with teams, I’m always ready to
+              frameworks. Whether it is developing interactive interfaces,
+              optimizing code, or collaborating with teams, I am always ready to
               push boundaries and stay ahead in the ever-evolving tech world.
             </p>
             <span className="italic text-center">
-              "Code that connects, design that inspires."
-              <Image src={Signature} alt="signature" className="h-14 w-auto mx-auto"/>
+            «Code that connects, design that inspires»
+              <Image
+                src={Signature}
+                alt="signature"
+                className="h-14 w-auto mx-auto"
+              />
             </span>
             <Image src={Bottom} alt="bottom" className="h-20 w-auto mx-auto" />
           </div>
+
           {/* SKILLS */}
           <div className="flex flex-col gap-12 items-center mt-8">
             <h1 className="text-2xl font-bold">Skills</h1>
@@ -76,7 +81,6 @@ export default function AboutPage() {
             <div className="">
               {/* EXPERIENCE LIST ITEM */}
               <div className="flex justify-between h-48">
-                
                 {/* LEFT */}
                 <div className="w-1/3 ">
                   {/* JOB TITLE */}
@@ -111,7 +115,6 @@ export default function AboutPage() {
 
               {/* EXPERIENCE LIST ITEM */}
               <div className="flex justify-between h-48">
-                
                 {/* LEFT */}
                 <div className="w-1/3 "></div>
                 {/* CENTER */}
@@ -136,7 +139,7 @@ export default function AboutPage() {
                   </div>
                   {/* JOB DATE */}
                   <div className="p-3 text-red-400 text-sm font-semibold">
-                   dec.2023 - 2024
+                    dec.2023 - 2024
                   </div>
                   {/* JOB COMPANY */}
                   <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
@@ -175,13 +178,10 @@ export default function AboutPage() {
                     {/* LINE CIRCLE */}
                     <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
                   </div>
-                  
                 </div>
-                
-                
+
                 {/* RIGHT */}
                 <div className="w-1/3 "></div>
-                
               </div>
             </div>
           </div>
