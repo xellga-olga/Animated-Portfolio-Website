@@ -61,7 +61,7 @@ export default function PortfolioPage() {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-[500vh] relative" ref={ref}>
+      <div className="h-[600vh] relative" ref={ref}>
         <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-4xl text-center md:text-6xl lg:text-8xl">
           My Works
         </div>
@@ -101,6 +101,43 @@ export default function PortfolioPage() {
               </div>
             ))}
           </motion.div>
+        </div>
+      </div>
+
+      <div className="w-screen h-screen flex flex-col gap-8 md:gap-12 lg:gap-16 items-center justify-center text-center px-4">
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold">
+          Do you have a project?
+        </h1>
+        <div className="relative">
+          <motion.svg
+            animate={{ rotate: 360 }}
+            transition={{ duration: 8, ease: "linear", repeat: Infinity }}
+            viewBox="0 0 300 300"
+            className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80"
+          >
+            <defs>
+              <path
+                id="circlePath"
+                d="M 150, 150 m -60, 0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0"
+              />
+            </defs>
+
+            <text
+              fill="#000"
+              textAnchor="middle"
+              className="text-sm md:text-base lg:text-lg"
+            >
+              <textPath href="#circlePath" startOffset="50%">
+                Front-End Developer • Front-End Developer
+              </textPath>
+            </text>
+          </motion.svg>
+          <Link
+            href="/contact"
+            className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center text-sm md:text-base lg:text-lg"
+          >
+            Hire Me
+          </Link>
         </div>
       </div>
     </motion.div>
