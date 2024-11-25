@@ -79,7 +79,8 @@ export default function PortfolioPage() {
                   </h1>
 
                   <div className="relative w-64 h-48 md:w-80 md:h-56 lg:w-[400px] lg:h-[300px] xl:w-[500px] xl:h-[350px]">
-                    <Image
+                    <Image 
+                    className="rounded-xl"
                       src={item.img}
                       alt="Project Image"
                       layout="fill"
