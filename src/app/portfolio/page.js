@@ -66,8 +66,17 @@ export default function PortfolioPage() {
           My Works
         </div>
 
-        <div className="sticky top-0 w-screen h-screen">
-          <motion.div style={{ x }} className="flex w-screen h-screen">
+        <div className="sticky top-0 w-screen h-screen overflow-hidden">
+          <motion.div
+            style={{ x }}
+            className="flex h-screen"
+            drag="x"
+            dragConstraints={{
+              left: -((items.length - 1) * window.innerWidth),
+              right: 0,
+            }}
+            whileDrag={{ cursor: "grabbing" }}
+          >
             {items.map((item) => (
               <div
                 className={`flex-shrink-0 h-full w-full flex items-center justify-center bg-gradient-to-r ${item.color}`}
@@ -79,8 +88,8 @@ export default function PortfolioPage() {
                   </h1>
 
                   <div className="relative w-64 h-48 md:w-80 md:h-56 lg:w-[400px] lg:h-[300px] xl:w-[500px] xl:h-[350px]">
-                    <Image 
-                    className="rounded-xl"
+                    <Image
+                      className="rounded-xl"
                       src={item.img}
                       alt="Project Image"
                       layout="fill"
