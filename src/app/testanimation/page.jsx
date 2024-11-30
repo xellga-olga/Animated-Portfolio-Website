@@ -9,9 +9,9 @@ const TestPage = () => {
       x: 400,
       y: 300,
       opacity: 0.5,
-      transition:{
-         duration:3
-      }
+      transition: {
+        duration: 3,
+      },
     },
     variant2: {
       x: 100,
@@ -25,7 +25,7 @@ const TestPage = () => {
       <motion.div
         className="w-96 h-96 rounded bg-red-400"
         variants={variants}
-        animate='variant1'
+        animate="variant1"
         transition={{ delay: 2, duration: 4 }}
       ></motion.div>
     </div>

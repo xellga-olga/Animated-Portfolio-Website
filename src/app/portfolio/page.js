@@ -87,23 +87,24 @@ export default function PortfolioPage() {
                     {item.title}
                   </h1>
 
-                  <div className="relative w-64 h-48 md:w-80 md:h-56 lg:w-[400px] lg:h-[300px] xl:w-[500px] xl:h-[350px]">
+                  <div className="relative h-48 w-60 md:w-80 md:h-56 lg:w-[450px] lg:h-[350px] xl:w-[550px] xl:h-[450px]">
                     <Image
                       className="rounded-xl"
                       src={item.img}
                       alt="Project Image"
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      style={{ objectFit: "cover" }}
+                      sizes="500px"
                       priority
                     />
                   </div>
 
-                  <p className="text-sm md:text-base lg:text-lg xl:text-xl max-w-[400px] md:max-w-[500px] lg:max-w-[600px]">
+                  <p className="text-sm md:text-base lg:text-lg xl:text-xl max-w-[500px] md:max-w-[500px] lg:max-w-[650px]">
                     {item.desc}
                   </p>
 
                   <Link href={item.link}>
-                    <button className="p-2 text-sm md:p-4 md:text-md lg:p-6 lg:text-lg bg-white text-gray-600 font-semibold rounded-xl shadow-md hover:bg-gray-200 transition duration-300 ease-in-out">
+                    <button className="p-2 text-sm md:p-4 md:text-md lg:p-3 lg:text-md bg-white text-gray-600 font-semibold rounded-xl shadow-md hover:bg-gray-200 transition duration-300 ease-in-out">
                       See Demo
                     </button>
                   </Link>
